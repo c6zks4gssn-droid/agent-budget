@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bonanza-agent-budget"
+version = "0.1.0"
+description = "One-line spending control for AI agents. @budget(max_usd=10.00) decorator for LLM APIs and x402 payments."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+keywords = [
+    "ai", "agents", "llm", "budget", "spending", "cost",
+    "x402", "mcp", "anthropic", "openai", "finops",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# Zero required dependencies — works out of the box.
+# Optional extras auto-patch SDKs.
+dependencies = []
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.34"]
+openai    = ["openai>=1.40"]
+all       = ["anthropic>=0.34", "openai>=1.40"]
+dev       = ["pytest>=8", "pytest-asyncio>=0.23", "anthropic>=0.34", "openai>=1.40"]
+
+[project.urls]
+Homepage   = "https://bonanza-labs.com"
+Repository = "https://github.com/c6zks4gssn-droid/agent-budget"
+Issues     = "https://github.com/c6zks4gssn-droid/agent-budget/issues"
+Changelog  = "https://github.com/c6zks4gssn-droid/agent-budget/releases"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_budget*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
