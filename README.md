@@ -17,6 +17,7 @@ Raises `BudgetExceeded` the moment your agent tries to go over.
 
 ```bash
 pip install agent-budget
+# until PyPI: pip install "git+https://github.com/c6zks4gssn-droid/agent-budget.git"
 ```
 
 No required dependencies. Works with any LLM SDK.
