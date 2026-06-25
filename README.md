@@ -16,8 +16,9 @@ Raises `BudgetExceeded` the moment your agent tries to go over.
 ## Install
 
 ```bash
-pip install agent-budget
-# until PyPI: pip install "git+https://github.com/c6zks4gssn-droid/agent-budget.git"
+pip install bonanza-labs-agent-budget
+# PyPI name (CLI/import unchanged). From git:
+# pip install "git+https://github.com/c6zks4gssn-droid/agent-budget.git"
 ```
 
 No required dependencies. Works with any LLM SDK.
@@ -75,9 +76,9 @@ async def my_agent(query: str):
 
 Install with the extras:
 ```bash
-pip install "agent-budget[anthropic]"   # auto-patch Anthropic SDK
-pip install "agent-budget[openai]"      # auto-patch OpenAI SDK
-pip install "agent-budget[all]"         # both
+pip install "bonanza-labs-agent-budget[anthropic]"   # auto-patch Anthropic SDK
+pip install "bonanza-labs-agent-budget[openai]"      # auto-patch OpenAI SDK
+pip install "bonanza-labs-agent-budget[all]"         # both
 ```
 
 ---
